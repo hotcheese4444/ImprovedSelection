@@ -1,17 +1,15 @@
 name = "ImprovedSelection"
-version = 2
-copyright = ""
+version = 3
 description = [[
 REQUIRES REUI
 See Readme or https://youtu.be/gdqmNRHG_jg
 ]]
-icon = "/mods/ImprovedSelection/icon.png"
+icon = "/mods/ImprovedSelection/image.png"
 author = "HotCheese"
 url = ""
-uid = "improved-selection-v2"
+uid = "improved-selection-v3"
 selectable = true
 enabled = true
 exclusive = false
+ReUI = 'ImprovedSelection=1.0.3'
 ui_only = true
-
-ReUI = 'ImprovedSelection=1.0.0'
