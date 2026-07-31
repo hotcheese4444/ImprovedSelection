@@ -12,7 +12,8 @@ Requires: ReUI
 
 ## Selection Categories (Onscreen Only)
 
-When triggering the selection hotkeys, any alive, onscreen units that you have added to that group be selected.
+When triggering the selection hotkeys, alive, onscreen matching units are selected. Units assigned to any
+control group are excluded, including units added through the custom bindings below.
 
 1. **Select all onscreen mml/sniper**
    - Matches: `(MOBILE * SILO * BUILTBYTIER3FACTORY * LAND) + SNIPER`

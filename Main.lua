@@ -52,6 +52,13 @@ function Main(isReplay)
         return false
     end
 
+    -- FAF exposes control groups as selection sets on each unit.
+    local function IsInControlGroup(unit)
+        if unit == nil or IsDestroyed(unit) then return false end
+        local ok, selectionSets = pcall(function() return unit:GetSelectionSets() end)
+        return ok and selectionSets ~= nil and next(selectionSets) ~= nil
+    end
+
     local function IsLand(unit)
         if unit == nil or IsDestroyed(unit) then return false end
         local ok, bp = pcall(function() return unit:GetBlueprint() end)
@@ -254,7 +261,7 @@ function Main(isReplay)
 
         local function AddToSelect(unit)
             local eid = GetEntityId(unit)
-            if eid and not selectedIds[eid] then
+            if eid and not selectedIds[eid] and not IsInControlGroup(unit) then
                 selectedIds[eid] = true
                 table.insert(toSelect, unit)
             end
@@ -295,7 +302,7 @@ function Main(isReplay)
 
         local function AddToSelect(unit)
             local eid = GetEntityId(unit)
-            if eid and not selectedIds[eid] then
+            if eid and not selectedIds[eid] and not IsInControlGroup(unit) then
                 selectedIds[eid] = true
                 table.insert(toSelect, unit)
             end
@@ -336,7 +343,7 @@ function Main(isReplay)
 
         local function AddToSelect(unit)
             local eid = GetEntityId(unit)
-            if eid and not selectedIds[eid] then
+            if eid and not selectedIds[eid] and not IsInControlGroup(unit) then
                 selectedIds[eid] = true
                 table.insert(toSelect, unit)
             end
@@ -377,7 +384,7 @@ function Main(isReplay)
 
         local function AddToSelect(unit)
             local eid = GetEntityId(unit)
-            if eid and not selectedIds[eid] then
+            if eid and not selectedIds[eid] and not IsInControlGroup(unit) then
                 selectedIds[eid] = true
                 table.insert(toSelect, unit)
             end
@@ -419,7 +426,7 @@ function Main(isReplay)
 
         local function AddToSelect(unit)
             local eid = GetEntityId(unit)
-            if eid and not selectedIds[eid] then
+            if eid and not selectedIds[eid] and not IsInControlGroup(unit) then
                 selectedIds[eid] = true
                 table.insert(toSelect, unit)
             end
