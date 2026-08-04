@@ -3,6 +3,7 @@ ReUI.Require
     "ReUI.Core >= 1.1.0",
     "ReUI.Actions >= 1.2.0",
     "ReUI.LINQ >= 1.1.0",
+    "ReUI.Units >= 1.0.0",
 }
 
 function Main(isReplay)

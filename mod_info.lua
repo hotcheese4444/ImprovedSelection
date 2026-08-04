@@ -1,9 +1,8 @@
 name = "ImprovedSelection"
-version = 6
+version = 7
 description = [[
 REQUIRES REUI
 See Readme or https://youtu.be/gdqmNRHG_jg
-
 Four hotkeys for air combat management:
 "Select Fighters" selects all friendly fighters, excluding any that are currently excluded.
 "Select Bombers" selects all friendly bombers, excluding any that are currently excluded.
@@ -18,13 +17,14 @@ Adds eight hotkeys for land management:
 6. "Add selected units to Direct Fire selection"
 7. "Add selected units to Land AA selection"
 8. "Add selected units to Shields/Deceivers selection"
+NOTE LAND UNITS IN CONTROL GROUPS ARE EXCLUDED
 ]]
 icon = "/mods/ImprovedSelection/icon.png"
 author = "HotCheese"
 url = ""
-uid = "improved-selection-v6"
+uid = "improved-selection-v7"
 selectable = true
 enabled = true
 exclusive = false
-ReUI = 'ImprovedSelection=1.0.6'
+ReUI = 'ImprovedSelection=1.0.7'
 ui_only = true
